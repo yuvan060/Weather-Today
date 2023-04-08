@@ -1,0 +1,70 @@
+.searchBar h1 {
+  position: absolute;
+  top: 4%;
+  font-size: 3em;
+}
+.searchBar {
+  position: relative;
+  background: url("../assest/bgOpac.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 35vh;
+}
+
+.searchBox {
+  position: relative;
+  margin-top: 2%;
+  width: 20%;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f6fbf4;
+  border: 2px solid black;
+  border-radius: 15px 0px 0px 15px;
+  box-sizing: border-box;
+  height: 50px;
+}
+
+.icon {
+  padding: 1.7%;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  background-color: #f6fbf4;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  position: absolute;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+  border: 1px outset;
+  width: 270px;
+  height: 300px;
+  text-align: center;
+  box-shadow: 1px 1px 4px black;
+  background-color: #f9f3ee;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 5%;
+  padding-bottom: 6%;
+  background-color: #f5ebeb;
+}
