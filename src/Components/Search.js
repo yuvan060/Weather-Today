@@ -33,51 +33,35 @@ function SearchBox() {
         console.log(error);
       });
   };
-  if (Object.keys(Weather).length === 0) {
-    return (
-      <div className={style.searchBar}>
-        <h1>Weather today</h1>
-        <div className={style.searchBox}>
-          <input
-            type="text"
-            value={city}
-            placeholder="eg : London"
-            onChange={(e) => setCity(e.target.value)}
-          ></input>
-          <div className={style.icon} onClick={fetchData}>
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/10302/10302844.png"
-              alt=""
-              height={30}
-            ></img>
-          </div>
+  const Element = (
+    <div className={style.searchBar}>
+      <h1>Weather today</h1>
+      <div className={style.searchBox}>
+        <input
+          type="text"
+          value={city}
+          placeholder="eg : London"
+          onChange={(e) => setCity(e.target.value)}
+        ></input>
+        <div className={style.icon} onClick={fetchData}>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/10302/10302844.png"
+            alt=""
+            height={30}
+          ></img>
         </div>
       </div>
-    );
+    </div>
+  );
+  if (Object.keys(Weather).length === 0) {
+    return Element;
   }
   if (loading) {
     return <Loader />;
   }
   return (
     <>
-      <div className={style.searchBar}>
-        <h1>Weather today</h1>
-        <div className={style.searchBox}>
-          <input
-            type="text"
-            value={city}
-            placeholder="eg : London"
-            onChange={(e) => setCity(e.target.value)}
-          ></input>
-          <div className={style.icon} onClick={fetchData}>
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/10302/10302844.png"
-              alt=""
-              height={30}
-            ></img>
-          </div>
-        </div>
-      </div>
+      {Element}
       <div className={style.container}>
         <div className={style.card}>
           <h1>{Weather.location.country}</h1>
